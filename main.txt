@@ -1,1 +1,9 @@
+//Variables
 
+//Top 200 Worldwide
+var trackName01 = getColumn("Top 200 Worldwide", "Track Name");
+var artist01 = getColumn("Top 200 Worldwide", "Artist");
+var position01 = getColumn("Top 200 Worldwide", "Position");
+var trackName01Index = 0;
+var artist01Index = 0;
+var position01Index = 0;
