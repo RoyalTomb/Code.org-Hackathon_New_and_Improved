@@ -32,3 +32,6 @@ onEvent("screenR02", "click", function( ) {
 onEvent("screenL02", "click", function( ) {
   setScreen("screenTop200USA");
 });
+
+//Top 200 Songs Worldwide
+//Making the left and right buttons work
