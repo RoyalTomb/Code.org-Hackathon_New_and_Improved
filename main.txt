@@ -35,3 +35,21 @@ onEvent("screenL02", "click", function( ) {
 
 //Top 200 Songs Worldwide
 //Making the left and right buttons work
+onEvent("leftButton01", "click", function( ) {
+  if (trackName01Index > 0) {
+    trackName01Index = trackName01Index - 1;
+  } else {
+    trackName01Index = 199;
+  }
+  if (artist01Index > 0) {
+    artist01Index = artist01Index - 1;
+  } else {
+    artist01Index = 199;
+  }
+  if (position01Index > 0) {
+    position01Index = position01Index - 1;
+  } else {
+    position01Index = 199;
+  }
+  updateScreenTop200();
+});
