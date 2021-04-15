@@ -7,3 +7,28 @@ var position01 = getColumn("Top 200 Worldwide", "Position");
 var trackName01Index = 0;
 var artist01Index = 0;
 var position01Index = 0;
+//Top 200 USA
+var trackName02 = getColumn("Top 200 USA", "Track Name");
+var artist02 = getColumn("Top 200 USA", "Artist");
+var position02 = getColumn("Top 200 USA", "Position");
+//Songs/Artists List + Viral 50 List 
+var trackName03 = getColumn("Viral 50 Worldwide", "Track Name");
+var artist03 = getColumn("Viral 50 Worldwide", "Artist");
+var position03 = getColumn("Viral 50 Worldwide", "Position");
+var trackName03Index = 0;
+var artist03Index = 0;
+var position03Index = 0;
+
+//Making the traverse screen buttons work
+onEvent("screenR01", "click", function( ) {
+  setScreen("screenTop200USA");
+});
+onEvent("screenL01", "click", function( ) {
+  setScreen("screenTop200World");
+});
+onEvent("screenR02", "click", function( ) {
+  setScreen("screenSaveList");
+});
+onEvent("screenL02", "click", function( ) {
+  setScreen("screenTop200USA");
+});
