@@ -53,3 +53,21 @@ onEvent("leftButton01", "click", function( ) {
   }
   updateScreenTop200();
 });
+onEvent("rightButton01", "click", function( ) {
+  if (trackName01Index < trackName01.length - 1) {
+    trackName01Index = trackName01Index + 1;
+  } else {
+    trackName01Index = 0;
+  }
+  if (artist01Index < artist01.length - 1) {
+    artist01Index = artist01Index + 1;
+  } else {
+    artist01Index = 0;
+  }
+  if (position01Index < position01.length - 1) {
+    position01Index = position01Index + 1;
+  } else {
+    position01Index = 0;
+  }
+  updateScreenTop200();
+});
