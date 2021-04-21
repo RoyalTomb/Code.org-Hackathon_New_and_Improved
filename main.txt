@@ -71,3 +71,16 @@ onEvent("rightButton01", "click", function( ) {
   }
   updateScreenTop200();
 });
+onEvent("firstSongButton", "click", function( ) {
+  setText("positionList01", "# " + 1);
+  setText("trackList01", trackName01[0]);
+  setText("artistList01", artist01[0]);
+});
+onEvent("lastSongButton", "click", function( ) {
+  setText("positionList01", "# " + 200);
+  setText("trackList01", trackName01[199]);
+  setText("artistList01", artist01[199]);
+});
+
+//Top 200 Songs USA
+//Randomize Button
