@@ -90,3 +90,21 @@ onEvent("randomButton01", "click", function( ) {
 
 //Save List Screen
 //"Add!" Button
+var additiveList = [];
+var allSongs = 0;
+orderList();
+function orderList() {
+  if (allSongs == 0) {
+    setProperty("removeButton", "hidden", true);
+  } else {
+    setProperty("removeButton", "hidden", false);
+  }
+  setProperty("addList", "text", ("Total Songs: " + allSongs) + "\n" + additiveList.join("\n"));
+}
+onEvent("addButton", "click", function( ) {
+  var newItem = getText("addSongs");
+  allSongs = allSongs + 1;
+  insertItem(additiveList, 0, newItem);
+  setText("addSongs", "");
+  orderList();
+});
