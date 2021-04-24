@@ -84,3 +84,9 @@ onEvent("lastSongButton", "click", function( ) {
 
 //Top 200 Songs USA
 //Randomize Button
+onEvent("randomButton01", "click", function( ) {
+  updateRandomizer();
+});
+
+//Save List Screen
+//"Add!" Button
