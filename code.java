@@ -108,3 +108,9 @@ onEvent("addButton", "click", function( ) {
   setText("addSongs", "");
   orderList();
 });
+//"Remove Item" Button
+onEvent("removeButton", "click", function( ) {
+  removeItem(additiveList, 0);
+  allSongs = allSongs - 1;
+  orderList();
+});
