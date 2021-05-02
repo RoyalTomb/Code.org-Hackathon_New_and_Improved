@@ -114,3 +114,66 @@ onEvent("removeButton", "click", function( ) {
   allSongs = allSongs - 1;
   orderList();
 });
+//Traversing the Viral 50 Worldwide
+onEvent("viral50L", "click", function( ) {
+  if (trackName03Index > 0) {
+    trackName03Index = trackName03Index - 1;
+  } else {
+    trackName03Index = 49;
+  }
+  if (artist03Index > 0) {
+    artist03Index = artist03Index - 1;
+  } else {
+    artist03Index = 49;
+  }
+  if (position03Index > 0) {
+    position03Index = position03Index - 1;
+  } else {
+    position03Index = 49;
+  }
+  update50ww();
+});
+onEvent("viral50R", "click", function( ) {
+  if (trackName03Index < trackName03.length - 1) {
+    trackName03Index = trackName03Index + 1;
+  } else {
+    trackName03Index = 0;
+  }
+  if (artist03Index < artist03.length - 1) {
+    artist03Index = artist03Index + 1;
+  } else {
+    artist03Index = 0;
+  }
+  if (position03Index < position03.length - 1) {
+    position03Index = position03Index + 1;
+  } else {
+    position03Index = 0;
+  }
+  update50ww();
+});
+
+//Functions
+function updateScreenTop200() {
+  var trackName01List = trackName01[trackName01Index];
+  var artist01List = artist01[artist01Index];
+  var position01List = position01[position01Index];
+  setText("positionList01", "# " + position01List);
+  setText("trackList01", trackName01List);
+  setText("artistList01", artist01List);
+}
+
+function updateRandomizer() {
+  var randomUpdate = randomNumber(0, trackName02.length - 1);
+  setText("trackList02", trackName02 [randomUpdate]);
+  setText("positionList02", position02 [randomUpdate]);
+  setText("artistList02", artist02 [randomUpdate]);
+}
+
+function update50ww() {
+  var trackName03List = trackName03 [trackName03Index];
+  var artist03List = artist03 [artist03Index];
+  var position03List = position03 [position03Index];
+  setText("viral50S", trackName03List);
+  setText("viral50A", artist03List);
+  setText("viral50N", "# " + position03List);
+}
